@@ -1,3 +1,5 @@
+require 'ember-rails'
+
 module Spree
   module Backend
     class Engine < ::Rails::Engine

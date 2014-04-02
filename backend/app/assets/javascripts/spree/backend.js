@@ -17,9 +17,10 @@
 //= require jquery.adaptivemenu
 //= require equalize
 //= require responsive-tables
-//= require underscore
-//= require backbone
 //= require moment
 //= require spree
 //= require spree/backend/spree-select2
+//= require handlebars
+//= require ember
+//= require backend/backend
 //= require_tree .

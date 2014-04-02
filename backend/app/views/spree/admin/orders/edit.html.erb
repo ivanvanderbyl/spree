@@ -26,6 +26,10 @@
   var order_number = '<%= @order.number %>';
 </script>
 
+ <script type="text/x-handlebars">
+ {{outlet}}
+ </script>
+
 <%= render :partial => "spree/admin/variants/autocomplete", :formats => :js %>
 <%= render :partial => "spree/admin/variants/autocomplete_stock", :formats => :js %>
 <%= render :partial => "spree/admin/orders/summary", :formats => :js %>
