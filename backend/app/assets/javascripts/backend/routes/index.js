@@ -1,6 +1,6 @@
 Backend.IndexRoute = Ember.Route.extend({
   model: function() {
-    return { number: 'R123456789', shipments: [{ number: 'H123456789'}] }
+    return Backend.Order.find("R123456789")
   }
   // setupController: function(indexController) {
   //   order = new(Backend.Order)

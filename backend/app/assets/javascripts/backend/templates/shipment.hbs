@@ -1,1 +1,39 @@
-{{number}}
+<div id="shipment_{{id}}" class='shipment' data-shipment-number="{{number}}">
+  <fieldset class="no-border-bottom">
+    <legend align="center" class="stock-location" data-hook="stock-location">
+      <span class="shipment-number">{{number}}</span>
+      -
+      <span class="shipment-state">{{state}}</span>
+      t(:Package from):
+      <strong class="stock-location-name" data-hook="stock-location-name">'{{stock_location_name}}</strong>
+      {{#if canShip}}
+        <a href='#' class='ship button icon-arrow-right'>t(:Ship)</a>
+      {{/if}}
+    </legend>
+  </fieldset>
+
+  <table class="stock-contents index" data-hook="stock-contents">
+    <colgroup>
+      <col style="width: 10%;" />
+      <col style="width: 30%;" />
+      <col style="width: 15%;" />
+      <col style="width: 15%;" />
+      <col style="width: 15%;" />
+      <col style="width: 15%;" />
+    </colgroup>
+
+    <thead>
+      <th colspan="2">Spree.t(:item_description)</th>
+      <th>Spree.t(:price)</th>
+      <th>Spree.t(:quantity)</th>
+      <th>Spree.t(:total)</th>
+      <th class="orders-actions actions" data-hook="admin_order_form_line_items_header_actions"></th>
+    </thead>
+
+    <tbody>
+    {{#each manifest}}
+      {{ render 'manifest_item' this }}
+    {{/each}}
+    </tbody>
+  </table>
+</div>
