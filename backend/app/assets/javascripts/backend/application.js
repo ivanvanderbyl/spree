@@ -2,6 +2,7 @@
 //= require handlebars
 //= require ember
 //= require ember-data
+//= require moment
 //= require_self
 
 // for more details see: http://emberjs.com/guides/application/
@@ -17,6 +18,10 @@ Backend = Ember.Application.create({
       return this._super(parsedName);
     }
   }),
-  rootElement: '#order'
+  rootElement: '#orders'
 });
 
+Ember.Handlebars.helper("prettyDate", function(date) {
+  debugger
+  return moment(date).format("MMMM Do YYYY")
+})

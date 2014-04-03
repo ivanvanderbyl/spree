@@ -17,7 +17,6 @@
 //= require jquery.adaptivemenu
 //= require equalize
 //= require responsive-tables
-//= require moment
 //= require spree
 //= require spree/backend/spree-select2
 //= require handlebars
