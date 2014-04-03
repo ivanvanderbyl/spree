@@ -1,5 +1,6 @@
 //= require jquery
 //= require handlebars
+//= require underscore
 //= require ember
 //= require ./application
 //= require_tree ./mixins

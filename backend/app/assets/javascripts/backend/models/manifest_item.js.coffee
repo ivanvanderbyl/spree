@@ -1,3 +1,1 @@
-Backend.ManifestItem = Ember.Object.extend
-  variant: (variant_id) ->
-    debugger
+Backend.ManifestItem = Ember.Object.extend({})

@@ -1,1 +1,30 @@
-Manifest item variant: {{variant}}
+<tr class="stock-item">
+  <td class="item-image">
+    <img src='{{unbound variantImage}}' />
+  </td>
+  <td class="item-name">
+    {{unbound variant.name}}
+    {{#if variant.sku}}
+      <strong>Spree.t(:sku)</strong> {{unbound variant.sku}}
+    {{/if}}
+  </td>
+  <td class="item-price align-center">{{unbound line_item.single_display_amount}}</td>
+  <td class="item-qty-show align-center">
+    {{#each states}}
+      {{unbound this}}
+    {{/each}}
+  </td>
+  <td class="item-qty-edit hidden">
+    <input type='number' id='quantity' min='0' class='line_item_quantity' size='5' value='{{unbound quantity}}'>
+  </td>
+  <td class="item-total align-center">{{unbound price}}</td>
+  <td class="cart-item-delete actions" data-hook="cart_item_delete">
+    {{#if canUpdate }}
+      <a href='#' class="save-item icon_link icon-ok no-text with-tip" data-variant-id='{{ unbound variant.id }}' data-action='save' title='Spree.t('actions.save')' style='display:none'></a>
+      <a href='#' class="cancel-item icon_link icon-cancel no-text with-tip" title='Spree.t('actions.cancel')' style='display:none'></a>
+      <a href='#' class='edit-item icon_link icon-edit no-text with-tip' title='Spree.t('edit')'></a>
+      <a href='#' class='split-item icon_link icon-resize-horizontal no-text with-tip' title='Spree.t('split')'></a>
+      <a href='#' class='delete-item icon-trash no-text with-tip' title='Spree.t('delete')'></a>
+    {{/if}}
+  </td>
+</tr>
