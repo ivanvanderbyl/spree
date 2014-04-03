@@ -22,7 +22,7 @@
     {{#if canUpdate }}
       <a href='#' class="save-item icon_link icon-ok no-text with-tip" data-variant-id='{{ unbound variant.id }}' data-action='save' title='Spree.t('actions.save')' style='display:none'></a>
       <a href='#' class="cancel-item icon_link icon-cancel no-text with-tip" title='Spree.t('actions.cancel')' style='display:none'></a>
-      <a href='#' class='edit-item icon_link icon-edit no-text with-tip' title='Spree.t('edit')'></a>
+      <a href='#' {{action 'edit'}} class='edit-item icon_link icon-edit no-text with-tip' title='Spree.t('edit')'></a>
       <a href='#' class='split-item icon_link icon-resize-horizontal no-text with-tip' title='Spree.t('split')'></a>
       <a href='#' class='delete-item icon-trash no-text with-tip' title='Spree.t('delete')'></a>
     {{/if}}

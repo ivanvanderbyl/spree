@@ -18,4 +18,8 @@ Backend.ManifestItemController = Ember.ObjectController.extend(
   canUpdate: (->
     this.get('shipment.permissions.can_update')
   ).property("canUpdate")
+
+  actions:
+    edit: ->
+      debugger
 )
