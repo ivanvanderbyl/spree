@@ -17,7 +17,12 @@ Backend = Ember.Application.create({
     resolveTemplate: function(parsedName) {
       parsedName.fullNameWithoutType = "backend/" + parsedName.fullNameWithoutType;
       return this._super(parsedName);
-    }
+    },
+    // resolve: function(name) {
+    //   console.log(name)
+    //   console.log(this._super(name))
+    //   return this._super(name);
+    // }
   }),
   rootElement: '#orders'
 });
