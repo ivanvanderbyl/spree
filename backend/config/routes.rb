@@ -152,5 +152,8 @@ Spree::Core::Engine.add_routes do
         put :addresses
       end
     end
+
+    # To make ember happy
+    get '/orders/:number', :to => "orders#index"
   end
 end

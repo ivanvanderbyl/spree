@@ -1,4 +1,4 @@
-<table class="index responsive" id="listing_orders" data-hook>
+<table class="index responsive" id="listing_orders">
   <colgroup>
      <col style="width: 13%;">
      <col style="width: 10%;">
@@ -10,15 +10,15 @@
      <col style="width: 8%;">
   </colgroup>
   <thead>
-    <tr data-hook="admin_orders_index_headers">
-      <th>Spree.t(:completed_at)</th>
-      <th>Spree.t(:number) %></th>
-      <th>Spree.t(:state)</th>
-      <th>Spree.t(:payment_state)</th>
-      <th>Spree.t(:shipment_state)</th>
-      <th>Spree.t(:email)</th>
-      <th>Spree.t(:total)</th>
-      <th data-hook="admin_orders_index_header_actions" class="actions"></th>
+    <tr>
+      <th>{{i18n completed_at}}</th>
+      <th>{{i18n number}}</th>
+      <th>{{i18n state}}</th>
+      <th>{{i18n payment_state}}</th>
+      <th>{{i18n shipment_state}}</th>
+      <th>{{i18n email}}</th>
+      <th>{{i18n total}}</th>
+      <th class="actions"></th>
     </tr>
   </thead>
   <tbody>

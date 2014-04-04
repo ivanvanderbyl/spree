@@ -5,6 +5,7 @@ require 'deface'
 require 'select2-rails'
 require 'momentjs-rails'
 require 'ember-rails'
+require 'i18n-js'
 
 require 'spree/core'
 

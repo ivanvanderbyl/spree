@@ -1,4 +1,6 @@
 Backend.ManifestItemController = Ember.ObjectController.extend(
+  init: ->
+    debugger
   line_item: (->
     item = this
     line_item = _.find(item.get("shipment.order.line_items"), (line_item) ->
