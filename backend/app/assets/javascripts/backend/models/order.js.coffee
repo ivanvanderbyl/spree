@@ -17,8 +17,9 @@ Backend.Order.reopenClass
       Backend.Order.create(attrs)
 
   findAll: ->
-    orders = Em.A()
-    $.getJSON("http://localhost:3000/api/orders").then (data) ->
-      data.orders.forEach (order) ->
-        orders.pushObject(Backend.Order.create(order))
-    orders
+    return Em.$.getJSON("http://localhost:3000/api/orders").then (result) ->
+      orders = Em.A()
+      Em.run ->
+        result.orders.forEach (order) ->
+          orders.pushObject(Backend.Order.create(order))
+      return orders;

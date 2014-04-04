@@ -1,6 +1,4 @@
-Backend.ManifestItemController = Ember.ObjectController.extend(
-  init: ->
-    debugger
+Backend.OrdersShipmentsManifestItemController = Ember.ObjectController.extend
   line_item: (->
     item = this
     line_item = _.find(item.get("shipment.order.line_items"), (line_item) ->
@@ -14,7 +12,7 @@ Backend.ManifestItemController = Ember.ObjectController.extend(
     @get("variant").images[0].mini_url
   ).property("variantImage")
   states: (->
-    states = $.map @get("model.states"), (state, count) ->
+    $.map @get("model.states"), (state, count) ->
       count + " x " + state
   ).property("states")
   canUpdate: (->
@@ -24,4 +22,3 @@ Backend.ManifestItemController = Ember.ObjectController.extend(
   actions:
     edit: ->
       debugger
-)

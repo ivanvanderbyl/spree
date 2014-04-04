@@ -28,4 +28,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'i18n-js', '2.1.2'
 
   s.add_development_dependency 'email_spec', '~> 1.2.1'
+  s.add_development_dependency 'teaspoon'
 end

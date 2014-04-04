@@ -13,4 +13,5 @@ I18n.translations = {
     item_description: 'Item description'
     price: 'Price'
     quantity: 'Quantity'
+    sku: 'SKU'
 }
