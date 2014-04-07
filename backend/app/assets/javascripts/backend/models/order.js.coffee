@@ -33,5 +33,5 @@ Backend.Order = DS.Model.extend({
   payment_state: DS.attr('string')
   email: DS.attr('string')
   display_total: DS.attr('string')
-  shipments: DS.hasMany('shipments')
+  shipments: DS.hasMany('shipment')
   })

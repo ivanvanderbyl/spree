@@ -1,4 +1,4 @@
-Ember.Handlebars.registerHelper "prettyDate", (date) ->
+Ember.Handlebars.helper "prettyDate", (date) ->
   moment(date).format(I18n.t('date.format'))
 
 Ember.Handlebars.registerHelper 'i18n', (property, options) ->
