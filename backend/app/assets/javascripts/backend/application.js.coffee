@@ -15,6 +15,7 @@
 #= require_tree ./helpers
 #= require_tree ./components
 #= require_tree ./templates
+#= require_tree ./serializers
 #= require ./router
 #= require_tree ./routes
 
