@@ -25,4 +25,13 @@
 #       return orders;
 
 
-Backend.Order = DS.Model.extend({})
+Backend.Order = DS.Model.extend({
+  completed_at: DS.attr('string')
+  number: DS.attr('string')
+  state: DS.attr('string')
+  shipment_state: DS.attr('string')
+  payment_state: DS.attr('string')
+  email: DS.attr('string')
+  display_total: DS.attr('string')
+  shipments: DS.hasMany('shipments')
+  })
