@@ -19,7 +19,5 @@
 //= require responsive-tables
 //= require spree
 //= require spree/backend/spree-select2
-//= require handlebars
-//= require ember
-//= require backend/backend
+//= require backend/application
 //= require_tree .
