@@ -16,6 +16,8 @@ module Spree
 
       # sets the manifests / assets to be precompiled, even when initialize_on_precompile is false
       initializer "spree.assets.precompile", :group => :all do |app|
+        app.config.handlebars.templates_root = 'backend/templates'
+
         app.config.assets.precompile += %w[
           spree/backend/all*
           spree/backend/orders/edit_form.js
