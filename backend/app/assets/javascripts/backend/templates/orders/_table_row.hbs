@@ -1,6 +1,7 @@
-<tr class="state-{{unbound state}}">
+{{#with order}}
+<tr {{bind-attr class="state"}}>
   <td class="align-center">
-    {{prettyDate completed_at}}
+    {{prettyDate completedAt}}
   </td>
   <td class="align-center">
     {{#link-to 'order' id}}{{id}}{{/link-to}}
@@ -9,22 +10,23 @@
     <span class="state {{unbound state}}">{{state}}</span>
   </td>
   <td class="align-center">
-    <span class="state {{unbound payment_state}}">
-      {{#if payment_state}}
-        {{payment_state}}
+    <span {{bind-attr class="paymentState :state"}}>
+      {{#if paymentState}}
+        {{paymentState}}
       {{/if}}
     </span>
   </td>
   <td class="align-center">
-    <span class="state {{unbound shipment_state}}">
+    <span {{bind-attr class="shipmentState :state"}}>
       {{#if shipment_state}}
         {{shipment_state}}
       {{/if}}
     </span>
   </td>
   <td>{{email}}</td>
-  <td class="align-center">{{display_total}}</td>
+  <td class="align-center">{{displayTotal}}</td>
   <td class='actions align-center' data-hook="admin_orders_index_row_actions">
-    Edit
+    {{#link-to "order.index" this }}Edit{{/link-to}}
   </td>
 </tr>
+{{/with}}
