@@ -2,7 +2,9 @@
 
 Backend.Router.map(function() {
   this.resource('orders', function() {
-    this.resource('order', { path: ':order_id' }, function() {});
+    this.resource('order', { path: '/:order_id' }, function() {
+      this.route('edit');
+    });
   });
 });
 
