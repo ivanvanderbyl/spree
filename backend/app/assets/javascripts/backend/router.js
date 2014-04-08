@@ -1,10 +1,12 @@
 // For more information see: http://emberjs.com/guides/routing/
 
 Backend.Router.map(function() {
-  this.resource('orders', { path: '/admin/orders'});
-  this.resource('order', { path: '/admin/orders/:order_id' });
+  this.resource('orders', function() {
+    this.resource('order', { path: ':order_id' }, function() {});
+  });
 });
 
 Backend.Router.reopen({
-  location: 'history'
+  location: 'history',
+  rootURL: '/admin'
 });
