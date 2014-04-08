@@ -1,14 +1,14 @@
 Backend.Order = DS.Model.extend
   shipments: DS.hasMany('shipment')
-  line_items: DS.hasMany('line_item')
-  completed_at: DS.attr('string')
-  state: DS.attr('string')
-  shipment_state: DS.attr('string')
-  payment_state: DS.attr('string')
-  email: DS.attr('string')
-  display_total: DS.attr('string')
+  lineItems: DS.hasMany('line_item')
+  completedAt: DS.attr()
+  state: DS.attr()
+  shipmentState: DS.attr()
+  paymentState: DS.attr()
+  email: DS.attr()
+  displayTotal: DS.attr()
 
   variantByID: (variant_id) ->
     item = this.get('line_items').filter (line_item) ->
       line_item.get('variant')
-      debugger
+      # debugger
