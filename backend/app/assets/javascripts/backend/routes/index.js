@@ -1,5 +1,5 @@
 Backend.IndexRoute = Ember.Route.extend({
-  beforeModel: function() {
-    this.transitionTo('orders');
+  activate: function() {
+    this.replaceWith('orders.index');
   }
 })
